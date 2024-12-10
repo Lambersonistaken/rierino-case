@@ -1,4 +1,7 @@
 import localFont from "next/font/local";
+import Sidebar from "../components/sidebar"
+import Header from "../components/header";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,12 +14,12 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-import Header from "./header";
 
 export default function Home() {
   return (
     <div className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}>
         <Header />
+        <Sidebar/>
     </div>
   );
 }
