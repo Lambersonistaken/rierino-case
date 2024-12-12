@@ -1,25 +1,20 @@
-import localFont from "next/font/local";
-import Sidebar from "../components/sidebar"
-import Header from "../components/header";
-
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
+import { ElementsProvider } from "@/context/ElementsContext";
+import Header from "@/components/header";
+import Sidebar from "@/components/sidebar";
+import RenderingZone from "@/components/RenderingZone";
+import PropertiesSidebar from "@/components/PropertiesSidebar";
 
 export default function Home() {
   return (
-    <div className={`${geistSans.variable} ${geistMono.variable} font-[family-name:var(--font-geist-sans)]`}>
+    <ElementsProvider>
+      <div className="min-h-screen flex flex-col">
         <Header />
-        <Sidebar/>
-    </div>
+        <div className="flex flex-1">
+          <Sidebar />
+          <RenderingZone />
+          <PropertiesSidebar />
+        </div>
+      </div>
+    </ElementsProvider>
   );
 }

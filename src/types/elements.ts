@@ -1,3 +1,4 @@
+// Bu dosyada bize verilen tipleri tanımladık uygulamayı geliştirirken kullanmak ve kolaylık sağlamak için.
 export type ElementType = "heading" | "paragraph" | "image" | "video";
 
 export type BaseElement = {

@@ -1,3 +1,4 @@
+// Burası da basit header kısmımız.
 import Logo from "../../public/logo.svg";
 import Image from "next/image";
 import {Button} from "@/components/ui/button"
